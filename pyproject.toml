@@ -1,0 +1,10 @@
+[tool.ruff]
+line-length = 140
+target-version = "py311"
+extend-exclude = ["tests/fixtures"]
+
+[tool.ruff.lint]
+select = ["F", "E9", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["tpr"]

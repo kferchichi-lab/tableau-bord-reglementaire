@@ -1,0 +1,10 @@
+streamlit>=1.40
+pandas
+plotly
+pytz
+requests
+weasyprint
+pymupdf
+openpyxl
+PyJWT
+cryptography
