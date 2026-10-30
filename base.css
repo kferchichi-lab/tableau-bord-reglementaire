@@ -1,0 +1,97 @@
+    [data-testid="stVVerticalBlockBorderBordered"]{background-color:#FFFFFF!important;border:1px solid #E2E8F0!important;border-left:5px solid #1E3A8A!important;border-radius:12px!important;box-shadow:0 4px 15px rgba(0,0,0,0.02)!important;padding:20px!important;}
+    .stSelectbox label p{color:#475569!important;font-weight:600!important;font-size:13px!important;}
+    div[data-baseweb="select"]{background-color:#F8FAFC!important;border:1px solid #CBD5E1!important;border-radius:8px!important;}
+    div[data-baseweb="select"]>div{border:none!important;background-color:transparent!important;}
+    div[data-baseweb="select"]:hover{border-color:#0EA5E9!important;background-color:#FFFFFF!important;box-shadow:0 0 0 3px rgba(14,165,233,0.12)!important;}
+    div[data-baseweb="select"] span{color:#0F172A!important;font-weight:500!important;}
+    div[data-testid="stTabs"] [data-baseweb="tab-list"],
+    [data-baseweb="tab-list"],
+    div[role="tablist"]{
+        gap:12px!important;
+        flex-wrap:wrap!important;
+        border-bottom:none!important;
+    }
+    /* Supprime la barre de soulignement native (rouge/couleur du theme) */
+    div[data-testid="stTabs"] [data-baseweb="tab-list"] > div:not([role="tab"]),
+    div[data-testid="stTabs"] [data-baseweb="tab-highlight"],
+    div[data-testid="stTabs"] [data-baseweb="tab-highlight-bar"],
+    div[data-testid="stTabs"] [data-baseweb="tab-border"]{
+        display:none!important;
+        height:0!important;
+        background:transparent!important;
+        box-shadow:none!important;
+        border:none!important;
+    }
+    div[data-testid="stTabs"] button,
+    button[data-baseweb="tab"],
+    [role="tab"]{
+        font-size:17px!important;
+        font-weight:700!important;
+        color:#475569!important;
+        background-color:#FFFFFF!important;
+        padding:16px 32px!important;
+        margin-right:0!important;
+        border-radius:14px!important;
+        border:2px solid #CBD5E1!important;
+        box-shadow:0 2px 6px rgba(15,23,42,0.05)!important;
+        transition:all 0.18s ease-in-out!important;
+    }
+    div[data-testid="stTabs"] button p,
+    button[data-baseweb="tab"] p,
+    [role="tab"] p,
+    div[data-testid="stTabs"] button div,
+    button[data-baseweb="tab"] div,
+    [role="tab"] div{
+        font-size:17px!important;
+        font-weight:700!important;
+        color:inherit!important;
+    }
+    div[data-testid="stTabs"] button:hover,
+    button[data-baseweb="tab"]:hover,
+    [role="tab"]:hover{
+        color:#FFFFFF!important;
+        background-color:#3B82F6!important;
+        border:2px solid #1E3A8A!important;
+        box-shadow:0 6px 14px rgba(30,58,138,0.25)!important;
+    }
+    div[data-testid="stTabs"] button[aria-selected="true"],
+    button[data-baseweb="tab"][aria-selected="true"],
+    [role="tab"][aria-selected="true"]{
+        color:#FFFFFF!important;
+        background-color:#1E3A8A!important;
+        border:2px solid #1E3A8A!important;
+        box-shadow:0 6px 16px rgba(14,165,233,0.35)!important;
+    }
+
+    /* Centrage global des titres de section (paragraphes en gras 1.2rem) */
+    p[style*="font-size:1.2rem"],
+    div[data-testid="stMarkdownContainer"] p[style*="font-size:1.2rem"]{
+        text-align:center!important;
+        width:100%!important;
+        display:block!important;
+    }
+
+    /* ================= RESPONSIVE / MOBILE ================= */
+    @media (max-width: 768px){
+        h1{font-size:1.7rem!important;}
+        div[data-testid="stTabs"] button,
+        button[data-baseweb="tab"],
+        [role="tab"]{
+            font-size:13px!important;
+            padding:10px 14px!important;
+        }
+        div[data-testid="stTabs"] button p,
+        button[data-baseweb="tab"] p,
+        [role="tab"] p{
+            font-size:13px!important;
+        }
+        /* Les colonnes Streamlit passent en pile verticale sur petit écran */
+        div[data-testid="stHorizontalBlock"]{
+            flex-wrap:wrap!important;
+        }
+        div[data-testid="column"]{
+            min-width:100%!important;
+            flex:1 1 100%!important;
+        }
+        div[data-testid="stMetricValue"]{font-size:22px!important;}
+    }
